@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Home</title>
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.979W6xRv5YwYZ3KBEZr7zgHaEK&pid=Api&P=0&h=220" height="150px">
+      <div class="overlay-text">
+        <h2>artVoyage</h2>
+      </div>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      &#9776;
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <div class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="essential.html">Essentials</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="gallery.html" class="hide-on-mobile">Gallery</a></li>
+      </div>
+    </ul>
+  </nav>
+  <main>
+    <div class="content-left" id="content-left">
+      <p><b>"Every stroke of the brush is a dance of imagination on the canvas of reality."</b></p>
+    </div>
+    <div class="content-right">
+      <img src="https://cdn.wallpapersafari.com/12/83/LfGcoD.jpg">
+    </div>
+  </main>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      const contentLeft = document.getElementById("content-left");
+      navLinks.classList.toggle("active");
+      contentLeft.classList.toggle("shifted");
+      
+      const hamburger = document.querySelector(".hamburger");
+      if (navLinks.classList.contains("active")) {
+        hamburger.innerHTML = "&#10006;"; 
+      } else {
+        hamburger.innerHTML = "&#9776;"; 
+      }
+    }
+  </script>
+</body>
+</html>
